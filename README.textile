@@ -13,7 +13,7 @@ h2. Usage
 cd ~
 
 # Clone mine or your own fork
-git clone git://github.com/matschaffer/profile.git .profile.d
+git clone git://github.com/codeslinger/profile.git .profile.d
 
 # All *.conf files are loaded alphabetically, so this will retain your original settings
 mv .profile .profile.d/z_myoldsettings.conf
@@ -46,7 +46,6 @@ h2. Features
 * 'profile_push' function for pushing these files out to other servers
 * 'link_dotfiles' command that will create symlinks for all the files listed in the dotfiles directory
 * Auto setup of .foward file on Linux and Solaris
-* Integration with "CDArgs":http://www.skamphausen.de/cgi-bin/ska/CDargs
 
 h2. Planned features
 

@@ -1,21 +1,21 @@
 [user]
-	name = Mat Schaffer
-	email = mat.schaffer@gmail.com
+	name = Toby DiPasquale
+	email = toby@cbcg.net
 [alias]
 	co = checkout
 	ci = commit
 	st = status
 	pu = push
 	pl = pull
-  pub = "!f() { git push ${1:-origin} `git symbolic-ref HEAD`; }; f"
+	pub = "!f() { git push ${1:-origin} `git symbolic-ref HEAD`; }; f"
+	rl = reflog
 [web]
 	browser = open
-[gui]
-	fontdiff = -family Monaco -size 13 -weight normal -slant roman -underline 0 -overstrike 0
 [color]
 	branch = auto
 	diff = auto
 	status = auto
+	interactive = auto
 [color "branch"]
 	current = yellow reverse
 	local = yellow 
@@ -29,6 +29,4 @@
 	added = yellow
 	changed = green
 	untracked = cyan
-[github]
-	user = matschaffer
-	token = be13b7d9191d854c7185ad0a5ccd68d6
+
