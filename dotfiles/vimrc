@@ -6,6 +6,10 @@ set nocompatible	" Use Vim defaults instead of 100% vi compatibility
 set backspace=indent,eol,start	" more powerful backspacing
 
 " Now we set some defaults for the editor 
+set softtabstop=2
+set shiftwidth=2
+set tabstop=2
+set expandtab
 set autoindent		" always set autoindenting on
 set textwidth=0		" Don't wrap words by default
 set nobackup		" Don't keep a backup file
