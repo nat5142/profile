@@ -9,6 +9,8 @@
 	pl = pull
 	pub = "!f() { git push ${1:-origin} `git symbolic-ref HEAD`; }; f"
 	rl = reflog
+	df = diff
+	dfc = diff --cached
 [web]
 	browser = open
 [color]
