@@ -11,6 +11,7 @@
 	rl = reflog
 	df = diff
 	dfc = diff --cached
+	hist = log --oneline --graph --decorate
 [web]
 	browser = open
 [color]
