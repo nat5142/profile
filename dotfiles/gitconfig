@@ -1,6 +1,6 @@
 [user]
 	name = Toby DiPasquale
-	email = toby@cbcg.net
+	email = toby@rightaction.com
 [alias]
 	co = checkout
 	ci = commit
@@ -8,6 +8,7 @@
 	pu = push
 	pl = pull
 	pub = "!f() { git push ${1:-origin} `git symbolic-ref HEAD`; }; f"
+	pul = "!f() { git pull ${1:-origin} `git symbolic-ref HEAD`; }; f"
 	rl = reflog
 	df = diff
 	dfc = diff --cached
