@@ -1,6 +1,6 @@
 [user]
 	name = Toby DiPasquale
-	email = toby@cbcg.net
+	email = toby@trustmetrics.com
 [alias]
 	co = checkout
 	ci = commit
@@ -9,9 +9,9 @@
 	pl = pull
 	pub = "!f() { git push ${1:-origin} `git symbolic-ref HEAD`; }; f"
 	pul = "!f() { git pull ${1:-origin} `git symbolic-ref HEAD`; }; f"
-	l = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
-	ll = log --stat --abbrev-commit
-	d = diff --color-words
+  	l = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
+  	ll = log --stat --abbrev-commit
+  	d = diff --color-words
 	rl = reflog
 	df = diff
 	dfc = diff --cached

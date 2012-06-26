@@ -1,0 +1,29 @@
+PROFILE_REPO="https://github.com/codeslinger/profile.git"
+PROFILE_PATH=".profile.d"
+
+if ! type -p git; then
+  echo "'git' command not found. Please install git first."
+  exit 1
+fi
+
+cd "$HOME"
+git clone $PROFILE_REPO $PROFILE_PATH
+
+if [ -f .profile ]; then
+  echo
+  echo "Moving current .profile to $PROFILE_PATH/userprofile.conf"
+  mv .profile $PROFILE_PATH/userprofile.conf
+fi
+
+ln -s .profile.d/init .profile
+
+for BLOCKING_RC in .bashrc .login .bashprofile; do
+  if [ -f $BLOCKING_RC ]; then
+    echo
+    echo "Warning: Found existing $BLOCKING_RC which may cause .profile not to load."
+    echo "You may want to move this file into a $PROFILE_PATH/$BLOCKING_RC.conf file."
+  fi
+done
+
+echo
+
