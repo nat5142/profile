@@ -1,3 +1,5 @@
+# vim:set ts=2 sw=2 et ai ft=sh:
+
 load_conf() {
   local conf
   for conf in "$1"/*.conf; do
@@ -20,13 +22,13 @@ is_home_dir() {
   [ "$full_path" = "$HOME" ]
 }
 
-PROFILE_INIT=`readlink ${BASH_ARGV[0]}`
-PROFILE_CORE=`dirname ${PROFILE_INIT}`
-PROFILE_CUSTOM="${PROFILE_CORE}/.."
+export PROFILE_INIT=`readlink ${BASH_ARGV[0]}`
+export PROFILE_CORE=`dirname ${PROFILE_INIT}`
+export PROFILE_CUSTOM="${PROFILE_CORE}/.."
+export MYHOST=`hostname`
 
 PLATFORM=`uname`
 ORIGINAL_PWD=`pwd`
-MYHOST=`hostname`
 
 cd "${HOME}"
 
