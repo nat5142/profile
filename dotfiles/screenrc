@@ -12,4 +12,8 @@ screen -t bash
 screen -t bash
 screen -t bash
 screen -t bash
+screen -t bash
+screen -t bash
+screen -t bash
+screen -t bash
 select 0
