@@ -17,6 +17,7 @@
 	df = diff
 	dfc = diff --cached
 	hist = log --oneline --graph --decorate
+  s = status -s
 [web]
 	browser = open
 [color]
