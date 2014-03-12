@@ -10,7 +10,9 @@
   b = branch
 	pub = "!f() { git push ${1:-origin} `git symbolic-ref HEAD`; }; f"
 	pul = "!f() { git pull ${1:-origin} `git symbolic-ref HEAD`; }; f"
+  pp = pull -p
 	l = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
+  lg = log --color --graph --pretty=format:'%C(cyan)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue) <%an>%Creset' --abbrev-commit
 	ll = log --stat --abbrev-commit
 	d = diff --color-words
 	rl = reflog
@@ -38,4 +40,5 @@
 	added = yellow
 	changed = green
 	untracked = cyan
-
+[push]
+	default = matching
