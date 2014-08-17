@@ -43,3 +43,4 @@ fi
 
 cd "${ORIGINAL_PWD}"
 
+[[ -s "/Users/toby/.gvm/scripts/gvm" ]] && source "/Users/toby/.gvm/scripts/gvm"
