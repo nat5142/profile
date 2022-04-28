@@ -1,0 +1,16 @@
+bash-completion
+gh
+imagemagick
+inetutils
+isl
+jq
+libmpc
+mongodb
+mysql-connector-c
+ncdu
+nmap
+node
+npm
+pkg-config
+pyenv
+wget

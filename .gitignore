@@ -1,0 +1,5 @@
+
+idea/
+
+# excludes local commands/aliases
+local/

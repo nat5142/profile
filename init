@@ -34,6 +34,7 @@ cd "${HOME}"
 
 load_conf "${PROFILE_CORE}"
 load_conf "${PROFILE_CORE}/${PLATFORM}"
+load_conf "${PROFILE_CORE}/local"
 load_conf "${PROFILE_CORE}/hosts/${MYHOST}"
 
 if ! is_home_dir "${PROFILE_CUSTOM}"; then
@@ -42,5 +43,3 @@ if ! is_home_dir "${PROFILE_CUSTOM}"; then
 fi
 
 cd "${ORIGINAL_PWD}"
-
-[[ -s "/Users/toby/.gvm/scripts/gvm" ]] && source "/Users/toby/.gvm/scripts/gvm"
