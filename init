@@ -35,7 +35,6 @@ cd "${HOME}"
 load_conf "${PROFILE_CORE}"
 load_conf "${PROFILE_CORE}/${PLATFORM}"
 load_conf "${PROFILE_CORE}/local"
-load_conf "${PROFILE_CORE}/hosts/${MYHOST}"
 
 if ! is_home_dir "${PROFILE_CUSTOM}"; then
   load_conf "${PROFILE_CUSTOM}"
