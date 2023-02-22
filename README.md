@@ -4,14 +4,17 @@
 Here's my terminal profile for a couple of MacBooks. Has yet to be fully implemented on a Raspberry Pi, but that would be cool.
 
 
-## Usage
+<br>
 
-```shell
+## Usage
+---
+
+```
 # Go home
 cd ~
 
 # Clone mine or your own fork
-git clone git://github.com/codeslinger/profile.git .profile.d
+git clone git://github.com/nat5142/profile.git .profile.d
 
 # All *.conf files are loaded alphabetically, so this will retain your original settings
 mv .profile .profile.d/z_myoldsettings.conf
@@ -24,13 +27,15 @@ ln -s .profile.d/init .profile
 source .profile
 ```
 
-From here you can now put any .profile.d/*.conf file in your `uname` folder. I've also added `local/` to the `.gitignore`, so any files/variables that are specific to one machine and shouldn't be tracked by git should be placed here. The load order is:
+From here you can now put any `.profile.d/*.conf` file in your `uname` folder. I've also added `local/` to the `.gitignore`, so any files/variables that are specific to one machine and shouldn't be tracked by git should be placed here. The load order is:
 
 1. `.profile.d/` (the top-level directory)
 2. `.profile.d/${PLATFORM}` ("Darwin" for MacOS)
 3. `.profile.d/local/` (gitignored)
 
 Note that this means local settings will override repository globals.
+
+<br>
 
 ## Features
 
@@ -43,9 +48,21 @@ Note that this means local settings will override repository globals.
 - 'link_dotfiles' command that will create symlinks for all the files listed in the dotfiles directory
 - Auto setup of .foward file on Linux and Solaris
 - Local overriding
-  
 
-## Planned features
+<br>  
+
+## Desired features
 
 - .zsh compliance on Darwin systems
 - Raspberry Pi implementation
+
+<br>
+
+## Known issues
+
+- When you open a terminal in vscode on mac, you'll get `bash: update_terminal_cwd: command not found`. Not sure how to fix that yet.
+
+
+## TODO: 
+
+- Add script to install all brew packages (traverse down tree just like with .conf files)
