@@ -61,6 +61,19 @@ Note that this means local settings will override repository globals.
 ## Known issues
 
 - When you open a terminal in vscode on mac, you'll get `bash: update_terminal_cwd: command not found`. Not sure how to fix that yet.
+  - Fixed by adding the following code snippet to your `/etc/bashrc` file (source [here](https://apple.stackexchange.com/a/139808)):
+
+```shell
+update_terminal_cwd() {
+    # Identify the directory using a "file:" scheme URL,
+    # including the host name to disambiguate local vs.
+    # remote connections. Percent-escape spaces.
+    local SEARCH=' '
+    local REPLACE='%20'
+    local PWD_URL="file://$HOSTNAME${PWD//$SEARCH/$REPLACE}"
+    printf '\e]7;%s\a' "$PWD_URL"
+}
+```
 
 
 ## TODO: 
