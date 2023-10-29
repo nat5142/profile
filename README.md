@@ -60,7 +60,6 @@ Note that this means local settings will override repository globals.
 
 ## Known issues
 
-- When you open a terminal in vscode on mac, you'll get `bash: update_terminal_cwd: command not found`. Not sure how to fix that yet.
   - Fixed by adding the following code snippet to your `/etc/bashrc` file (source [here](https://apple.stackexchange.com/a/139808)):
 
 ```shell
